@@ -26,12 +26,12 @@ const ViewPet = () => {
         <div className='container'>
             <div className='d-flex justify-content-between align-items-center'>
                 <h3 className='my-3'>Details about {pet.name}</h3>
-                <button onClick={(e) => handleDelete(e, pet._id)}>Adopt {pet.name}</button>
+                <button className='btn btn-outline-dark' onClick={(e) => handleDelete(e, pet._id)}>Adopt {pet.name}</button>
             </div>
             <div>
-                <p>Pet type: {pet.type}</p>
-                <p>Description: {pet.description}</p>
-                <p>Skills: {pet.skill1} <br /> {pet.skill2} <br /> {pet.skill3} </p>
+                <p><b>Pet type: </b>{pet.type}</p>
+                <p><b>Description: </b>{pet.description}</p>
+                <p><b>Skills: </b> {pet.skill1} <br /> {pet.skill2} <br /> {pet.skill3} </p>
             </div>
 
         </div>
