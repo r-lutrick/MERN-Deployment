@@ -11,8 +11,8 @@ const NavBar = () => {
             <h1>Pet Shelter</h1>
             {
                 location.pathname === '/' ?
-                <Link className='btn-dark' to='/pets/new'>Add Pet to Shelter</Link>:
-                <Link className='btn-dark' to='/'>Home</Link> 
+                <Link className='btn btn-dark' to='/pets/new'>Add Pet to Shelter</Link>:
+                <Link className='btn btn-dark' to='/'>Home</Link> 
             }
         </div>
     )
