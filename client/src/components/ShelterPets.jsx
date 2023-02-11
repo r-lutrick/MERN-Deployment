@@ -10,16 +10,14 @@ const ShelterPets = () => {
     )
     useEffect(() => {
         axios.get('http://localhost:8000/api/petShelter/get')
-            .then(res => {
-                setPets(res.data);
-            })
+            .then(res => {setPets(res.data)})
             .catch(err => console.log("All Pets error: ", err))
     }, [])
 
     return (
-        <div className='container'>
+        <div className='container table-responsive'>
             <h3 className='my-3'>These pets are looking for a good home</h3>
-            <table className='table'>
+            <table className='table table-sm table-hover'>
                 <thead className='table-dark'>
                     <tr>
                         <th>Name</th>
@@ -36,9 +34,9 @@ const ShelterPets = () => {
                                     <td>{pet.type}</td>
                                     <td>
                                         <Link to={`/pets/${pet._id}`}
-                                            className='btn btn-outline-dark'
-                                        >Details</Link> | <Link to={`/pets/edit/${pet._id}`}
-                                            className='btn btn-outline-secondary'
+                                            className='btn btn-sm btn-outline-dark'
+                                        >Details</Link><Link to={`/pets/edit/${pet._id}`}
+                                            className='btn btn-sm btn-outline-secondary'
                                         >Edit</Link>
                                     </td>
                                 </tr>
